@@ -41,7 +41,23 @@ button:disabled{opacity:.6;cursor:not-allowed}
 footer{text-align:center;color:#888;font-size:12px;padding:18px}
 @media(max-width:420px){.benefits{gap:8px}.benefit{font-size:13px;padding:12px 7px}.offer{padding:14px 8px}.offer h3{font-size:15px}.price{font-size:26px}}
 </style>
-<!-- ضع كود Meta Pixel الجديد هنا -->
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1627823425802071');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1627823425802071&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
 </head>
 <body>
 <main class="container">
@@ -111,8 +127,7 @@ footer{text-align:center;color:#888;font-size:12px;padding:18px}
 
 <script>
 document.addEventListener("DOMContentLoaded", function () {
-  // ضع رابط Google Apps Script الجديد هنا
-  const SCRIPT_URL = "PUT_YOUR_GOOGLE_APPS_SCRIPT_URL_HERE";
+  const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwi6HJ8CTx7jqmsXdatVPAi66xmoQge0RtUIH6RwlR6EG2TA7nMTjz9_tYG-7EgyZ3F/exec";
   const offers = Array.from(document.querySelectorAll(".offer"));
   const form = document.getElementById("orderForm");
   const btn = document.getElementById("submitBtn");
