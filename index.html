@@ -182,10 +182,13 @@ document.addEventListener("DOMContentLoaded", function () {
     const payload = { name, phone, city, address, offer: selectedOffer };
     try {
       await fetch(SCRIPT_URL, {
-        method: "POST",
-        mode: "no-cors",
-        body: new URLSearchParams(payload)
-      });
+  method: "POST",
+  mode: "no-cors",
+  body: new URLSearchParams(payload)
+})
+.then(() => {
+  fbq('track', 'Lead');
+});
       resultMsg.textContent = "تم إرسال طلبك. سيتم التواصل معك لتأكيد البيانات.";
       resultMsg.className = "success";
       btn.textContent = "تم إرسال الطلب";
